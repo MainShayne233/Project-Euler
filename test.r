@@ -1,1 +1,2 @@
-puts (35**(0.5)).to_i
+arry = [2, 4]
+puts arry.sum
