@@ -1,2 +1,2 @@
-arry = [2, 4]
-puts arry.sum
+x = "three hundred and forty-two"
+puts x.count("abcdefghijklmnopqrstuvwxyz")
