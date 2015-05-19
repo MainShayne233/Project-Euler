@@ -1,1 +1,2 @@
-puts (35**(0.5)).to_i
+x = "three hundred and forty-two"
+puts x.count("abcdefghijklmnopqrstuvwxyz")
