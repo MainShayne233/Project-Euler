@@ -1,6 +1,2 @@
-num = 1/589.to_f
-num = num.to_s
-array = num.split(//)
-puts array
-
-
+num = 73167176531330624919225119674426574742355349194934.to_s
+puts num.length
