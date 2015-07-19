@@ -2,7 +2,7 @@ trinum = 0
 x = 1
 divisors = 0
 
-while divisors < 700
+while divisors < 500
 	trinum += x
 	#puts trinum
 	check = 1
