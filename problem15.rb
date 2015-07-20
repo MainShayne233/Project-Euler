@@ -1,38 +1,25 @@
-<<<<<<< HEAD
-moves = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-puts moves.count
-movesum = 0
+require 'Matrix'
 
-def ten_moves?
-	worksum = 0
-	self.each do |val|
-		worksum += val
-	end
-	return true if worksum == 10
-end
-counter = 0
-until moves[40] == 1
-	moves[counter] = 1
-	
-=======
-puts "Enter the length of one side: "
-side = gets.to_i
+sideLength = 20
+sideLength += 1
 
+gridMatrix = Matrix.build(sideLength, sideLength) {|row, col| 0 }
 
-list = []
-
-for i in 1..side+1
-	list.push(1)
-end
-
-multiplier = 1
-
-for row in 0..side-1
-	list.push(1)
-	for i in 1..side
-		list.push(list[i+(side+1)*row]+list[side+i+(side+1)*row])
+for row in 0..sideLength-1
+	for element in 0..sideLength-1
+		tempSum = 0
+		if gridMatrix[row,element-1] != nil
+			tempSum += gridMatrix[row,element-1]
+		end
+		if gridMatrix[row-1,element] != nil
+			tempSum += gridMatrix[row-1,element]
+		end
+		if (element == 0) and (row == 0)
+			gridMatrix.send(:[]=,row,element,1)
+		else
+			gridMatrix.send(:[]=,row,element,tempSum)
+		end
 	end
 end
-	
-puts "\nThe amount of possible moves is #{list.last}"
->>>>>>> a7d8ad37e3da88bdcf601d47765064b21f819e9b
+
+puts gridMatrix[sideLength-1,sideLength-1]
