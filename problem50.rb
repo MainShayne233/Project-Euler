@@ -1,6 +1,6 @@
 require 'prime'
 
-primeArray = Prime.first 600
+primeArray = Prime.first 550
 
 winningPrime = 2
 consecutivePrime = 1;
