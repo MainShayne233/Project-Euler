@@ -1,61 +1,66 @@
 require 'Prime'
 
-def fixedSwapArray(digits)
-	chooseFrom = Array.new(digits-2) {'F'}
-	(digits-1).times do 
-		chooseFrom.push('S')
+# Only possible layouts because there must be 3 repeating digits and the last digit cannot be one
+	fiveDigitLayouts = [[1,-1,-1,-1,1],
+					  [-1,1,-1,-1,1],
+					  [-1,-1,1,-1,1],
+					  [-1,-1,-1,1,1]]
+
+	sixDigitLayouts = [[1,1,-1,-1,-1,1],
+					  [1,-1,1,-1,-1,1],
+					  [1,-1,-1,1,-1,1],
+					  [1,-1,-1,-1,1,1],
+					  [-1,1,1,-1,-1,1],
+					  [-1,1,-1,1,-1,1],
+					  [-1,1,-1,-1,1,1],
+					  [-1,-1,1,1,-1,1],
+					  [-1,-1,1,-1,1,1],
+					  [-1,-1,-1,1,1,1]]
+
+def numberGenerator(number, layout)
+	tempLayout = Array.new(layout)
+	digits = number.to_s.split(//).map! {|digit| digit.to_i}
+	for digit in digits
+		tempLayout[tempLayout.index(1)] = digit
 	end
-	chooseFrom = chooseFrom.permutation(digits-1).to_a.uniq!.map! {|set| set.push('F')}
-	return chooseFrom
+	return tempLayout
 end
 
-def valueConstruct(layout, fixedNumber, swapNumber)
-	fixedNumberArray = fixedNumber.to_s.split(//).map! {|element| element.to_i}
-	finalNumber = Array.new(layout)
-	while finalNumber.count('F') > 0
-		finalNumber[finalNumber.index('F')] = fixedNumberArray[0]
-		fixedNumberArray.shift
+def repeatingGenerator(repeating, layout)
+	tempLayout = Array.new(layout)
+	while tempLayout.count(-1) > 0
+		tempLayout[tempLayout.index(-1)] = repeating
 	end
-	while finalNumber.count('S') > 0
-		finalNumber[finalNumber.index('S')] = swapNumber
-	end
-	return finalNumber.join.to_i
+	return tempLayout.join.to_i
 end
 
-#fixedNumber in (10**(layout.count('F')-1))..(10**layout.count('F'))-1
+def famileSize(number, layout)
+	primes = 0
+	for repeating in 0..9
+		if repeatingGenerator(repeating, numberGenerator(number, layout)).prime?
+			primes += 1
+		end
+	end
+	return primes
+end
 
 
-def problem51()
-	digits = 6
-	while true
-		templateArray = fixedSwapArray(digits)
-		for layout in templateArray
-			for fixedNumber in 100000..130000
-				#puts fixedNumber
-				strikes = 0
-				for swapNumber in 0..9
-					puts "fixed: #{fixedNumber} swap: #{swapNumber} layout: #{layout} result: #{valueConstruct(layout, fixedNumber, swapNumber)}"
-					if !valueConstruct(layout, fixedNumber, swapNumber).prime?
-						strikes += 1
+def problem51(fiveDigitLayouts, sixDigitLayouts)
+	11.step(999,2) do |i|
+		layouts = i < 100 ? fiveDigitLayouts : sixDigitLayouts
+		for layout in layouts
+			if famileSize(i, layout) == 8
+				for repeat in 0..2
+					if repeatingGenerator(repeat, numberGenerator(i, layout)).prime?
+						return repeatingGenerator(repeat, numberGenerator(i, layout))
 					end
-					if strikes > 2
-						break
-					end
-				end
-				if strikes <= 2
-					return valueConstruct(layout, fixedNumber, swapNumber)
 				end
 			end
 		end
-		digits += 1
-		puts digits
 	end
 end
 
-puts problem51()
+puts problem51(fiveDigitLayouts, sixDigitLayouts)
 
-=begin
-for i in 0..9
-	puts valueConstruct(['F', 'F', 'F', 'S', 'F'], 1000, i)
-end
-=end
+
+
