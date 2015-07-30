@@ -10,7 +10,6 @@ i = 0
 				i = 1
 			end
 			j = j+1
-			#puts j
 		end
 			if i == 0
 				puts k

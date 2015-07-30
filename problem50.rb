@@ -10,9 +10,7 @@ for start in 0..primeArray.count-1
 	tempConsecs = 0
 	for index in 0..primeArray.count-1-start
 		tempSum += primeArray[start+index]
-		if tempSum > 1000000
-			break
-		end
+		break if tempSum > 1000000
 		tempConsecs += 1
 		if (tempSum.prime?) and (tempSum < 1000000) and (tempConsecs > consecutivePrime)
 			consecutivePrime = tempConsecs
@@ -20,4 +18,4 @@ for start in 0..primeArray.count-1
 		end
 	end
 end
-puts "#{winningPrime} #{consecutivePrime}"
+puts "#{winningPrime}"

@@ -1,10 +1,8 @@
 require 'Matrix'
 
-sideLength = 20
+sideLength = 20	
 sideLength += 1
-
 gridMatrix = Matrix.build(sideLength, sideLength) {|row, col| 0 }
-
 for row in 0..sideLength-1
 	for element in 0..sideLength-1
 		tempSum = 0
@@ -21,5 +19,4 @@ for row in 0..sideLength-1
 		end
 	end
 end
-
 puts gridMatrix[sideLength-1,sideLength-1]
