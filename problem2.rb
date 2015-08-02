@@ -1,3 +1,5 @@
+#Version 1.0
+=begin
 num1 = 0
 num2 = 1
 num3 = 0
@@ -11,3 +13,11 @@ while num3 < 4000000
 	num2 = num3
 end
 puts x
+=end
+
+#Version 2.0
+
+fibArray = [1, 2, 3]
+until fibArray.last > 4000000; fibArray.push(fibArray.last+fibArray[fibArray.count-2]); end
+puts fibArray.delete_if {|i| i%2!=0 or i > 4000000}.inject(:+)
+
