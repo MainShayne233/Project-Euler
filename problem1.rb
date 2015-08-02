@@ -1,9 +1,1 @@
-x = 0.0
-i = 1.0
-while i < 1000.0
-	if (i % 3.0 == 0) || (i % 5.0 == 0)
-		x = x + i
-	end
-	i = i+1.0
-end
-puts x
+puts (1..999).to_a.delete_if {|i| i%3!=0 and i%5!=0}.inject(:+)
