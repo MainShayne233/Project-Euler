@@ -1,3 +1,7 @@
+require 'prime'
+
+#Version 1.0
+=begin
 orig = 600851475143
 k = 2
 largest = 0
@@ -19,3 +23,12 @@ i = 0
 k = k+1
 end
 puts largest
+=end
+
+#Version 2.0
+
+def problem3()
+	for prime in Prime.each(600851475143.0**(0.5)).to_a.reverse!; return prime if 600851475143%prime == 0; end
+end
+
+puts problem3
