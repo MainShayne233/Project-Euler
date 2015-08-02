@@ -1,3 +1,7 @@
+require 'prime'
+
+#Version 1.0
+=begin
 ftwos = 0
 fthrees = 0
 ffives = 0
@@ -94,4 +98,67 @@ puts fseventeens
 puts fnineteens
 
 puts 2**ftwos*3**fthrees*5**ffives*7**fsevens*11**felevens*13**fthirteens*17**fseventeens*19**fnineteens
+=end
+
+#Version 2.0
+
+=begin
+def divisible(num)
+	return false if num.prime?
+	for factor in (1..19).to_a.reverse; return false if num%factor != 0; end
+	return true
+end
+
+num = 20
+while !divisible(num); num += 20; end
+puts num
+=end
+
+#Version 3.0
+
+def primeFactorization(number)
+	factorization = Hash.new
+	Prime.each do |prime|
+		factorization.merge!("#{prime}": 0)
+		until number%prime != 0; factorization[:"#{prime}"] += 1; number /= prime; end
+		return factorization if number == 1
+	end
+end
+
+def divisibleByPrimes(number)
+	factorization = primeFactorization(number)
+	Prime.each(number) {|prime| return false if factorization[:"#{prime}"] < 1}
+	return true
+end
+
+number = 20
+until divisibleByPrimes(number); number+=20; end
+puts number
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
