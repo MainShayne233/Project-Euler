@@ -1,17 +1,18 @@
-require 'prime'
+encryptedMessage = File.readlines('p059_cipher.txt').join.split(",").map {|i| i.to_i}
+print encryptedMessage.map {|i| i.chr}
 
-def nearestSquare(number)
-	return number**(0.5) if number**(0.5) == (number**(0.5)+0.5).to_i
-	return number**(0.5)+1
+for first in 97..122
+	for second in 97..122
+		for third in 97..122
+			key = Array.new([first, second, third])
+			index = 0
+			while index < encryptedMessage.count
+				for value in key
+					encryptedMessage[index] += value
+					index += 1
+				end
+			end
+			print encryptedMessage
+		end
+	end
 end
-
-primes = 3.0
-sideLength = 2.0
-corner = 9
-while primes/(sideLength*2+1) > 0.1
-	sideLength += 2
-	for i in 1..3; corner += sideLength; primes += 1 if corner.to_i.prime?; end
-	corner += sideLength
-end
-
-puts nearestSquare(corner)
