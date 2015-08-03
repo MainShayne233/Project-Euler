@@ -1,3 +1,7 @@
+require 'prime'
+# Version 1.0
+
+=begin
 primesum = 2
 #counter = 1
 prime = 3
@@ -18,3 +22,8 @@ while prime < 2000000
 	prime += 2
 end
 puts primesum
+=end
+
+# Version 2.0
+
+sum = 0; Prime.each(2000000) {|i| sum += i}; puts sum

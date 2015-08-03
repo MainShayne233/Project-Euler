@@ -1,3 +1,8 @@
+require 'prime'
+
+#Version 1.0
+
+=begin
 counter = 3
 prime = 0
 primecounter = 1
@@ -19,3 +24,8 @@ while primecounter < 10001
 	counter += 2
 end
 puts prime
+=end
+
+#Version 2.0
+
+puts Prime.take(10001).to_a.last

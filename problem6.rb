@@ -1,3 +1,6 @@
+# Version 1.0
+
+=begin
 counter1 = 1
 counter2 = 1
 x = 0
@@ -16,3 +19,8 @@ end
 y2 = y1**2
 puts y2
 puts y2 - x
+=end
+
+#Version 2.0
+
+puts (1..100).to_a.inject(:+)**2 - (1..100).to_a.map {|i| i**2}.inject(:+)

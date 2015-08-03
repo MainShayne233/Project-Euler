@@ -116,7 +116,7 @@ puts num
 
 #Version 3.0
 
-def primeFactorization(number)
+def primeFactors(number)
 	factorization = Hash.new
 	Prime.each do |prime|
 		factorization.merge!("#{prime}": 0)
@@ -125,25 +125,21 @@ def primeFactorization(number)
 	end
 end
 
-def divisibleByPrimes(number)
-	factorization = primeFactorization(number)
-	Prime.each(number) {|prime| return false if factorization[:"#{prime}"] < 1}
-	return true
+gcdHash = Hash.new; Prime.each(19) {|i| gcdHash.merge!("#{i}": 0)}
+
+Prime.each(19) do |prime|
+	for i in 1..20; if primeFactors(i)[:"#{prime}"]
+			if primeFactors(i)[:"#{prime}"] > gcdHash[:"#{prime}"]
+				gcdHash[:"#{prime}"] = primeFactors(i)[:"#{prime}"]
+			end
+		end
+	end
 end
 
-number = 20
-until divisibleByPrimes(number); number+=20; end
-puts number
 
-
-
-
-
-
-
-
-
-
+product = 1
+Prime.each(19) { |prime| product *= prime**gcdHash[:"#{prime}"]}
+puts product
 
 
 
