@@ -1,3 +1,6 @@
+#Version 1.0
+
+=begin
 a = [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8]
 b = [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 0]
 c = [81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30, 3, 49, 13, 36, 65]
@@ -85,6 +88,48 @@ until row == 17
 	column = 0
 	puts "loop"
 end
+puts product
+=end
+
+
+grid = File.readlines('p011_grid.txt').map {|i| i.split(" ").map {|i| i.to_i}}
+product = 0
+
+# Horizontal
+for row in grid
+	for start in 0..row.count-4
+		tempProduct = row[start..start+3].inject(:*)
+		product = tempProduct if tempProduct > product
+	end
+end
+
+# Vertical
+for column in 0..grid[0].count-1
+	for start in 0..grid.count-4
+		tempProduct = 1
+		for i in 0..3
+			tempProduct *= [grid[start+i][column]][0]
+		end
+		product = tempProduct if tempProduct > product
+	end
+end
+
+# Diagnol Down Left
+for row in 0..grid.count-4
+	for start in 0..grid[row].count-4
+		tempProduct = 1; for i in 0..3; tempProduct *= grid[row+i][start+i]; end
+		product = tempProduct if tempProduct > product
+	end
+end
+
+# Diagnal Down Right
+for row in 0..grid.count-4
+	for start in 3..grid[row].count-1
+		tempProduct = 1; for i in 0..3; tempProduct *= grid[start-i][row+i]; end
+		product = tempProduct if tempProduct > product
+	end
+end
+
 puts product
 
 
