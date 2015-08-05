@@ -30,29 +30,26 @@ puts "longestcount = #{longestcount}"
 
 #Version 2.0
 
-def collatzSequence(n)
-	i = 0
-	until n == 1
-		i += 1
-		n = n%2 == 0 ? n/2 : 3*n+1
+def realCollatz(num)
+	count = 1
+	until num == 1
+		count += 1
+		num = num%2==0 ? num/=2 : num*3+1
 	end
-	return i
+	return count
 end
 
 def problem14()
-	largestSeqeunce = 0
-	largestNumber = 0
+	largestSequence = 0
 	for i in 1..1000000
-		puts "#{i} : #{collatzSequence(i)}"
-		if collatzSequence(i) > largestSeqeunce
-			largestNumber = i
-			largestSeqeunce = collatzSequence(i)
+		if realCollatz(i) > largestSequence
+			largestSequence = realCollatz(i)
+			largestNum = i
 		end
 	end
-	return largestNumber
+	return largestNum
 end
 
-puts problem14
-
-
+puts problem14()
+ 
 
