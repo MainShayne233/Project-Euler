@@ -1,3 +1,6 @@
+# Version 1.0 - cooler version
+
+=begin
 require 'Matrix'
 
 sideLength = 20	
@@ -20,3 +23,19 @@ for row in 0..sideLength-1
 	end
 end
 puts gridMatrix[sideLength-1,sideLength-1]
+=end
+
+class Integer
+  def factorial
+    f = 1; for i in 1..self; f *= i; end; f
+  end
+  def choose(k)
+  	return (self.factorial)/(k.factorial*(self-k).factorial)
+  end
+end
+
+#def choose(n, k)
+#	return (n.factorial)/(k.factorial*(n-k).factorial)
+#end
+
+puts 40.choose(20)

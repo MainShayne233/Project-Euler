@@ -1,3 +1,6 @@
+# Version 1.0 THE ARROW
+
+=begin
 numarray = %w(75
 95 64
 17 47 82
@@ -81,3 +84,54 @@ for row2 in 1..2
 end
 
 puts largest_sum
+=end
+
+#Version 2.0 (works for problem 67 too)
+
+def sumMaxing(file)
+	pyramid = File.readlines(file).map {|i| i.split.delete_if{|i| i == "\n"}.map{|i| i.to_i}}
+	(pyramid.count-1).step(1,-1) do |i|
+		for num in 0..pyramid[i].count-2
+			pyramid[i-1][num] += pyramid[i][num] > pyramid[i][num+1] ? pyramid[i][num] : pyramid[i][num+1]
+		end
+		pyramid.delete_at(i)
+	end
+	return pyramid
+end
+
+puts sumMaxing('p018_pyramid.txt')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

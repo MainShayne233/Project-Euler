@@ -69,15 +69,6 @@ def primeFactors(number)
 	end
 end
 
-=begin
-def divAmount(number)
-	divisors = 1
-	primeFactors(number).each do |key, value|
-		divisors *= value+1
-	end
-	return divisors
-end
-=end
 
 def amountOfDivisors(number)
 	divisors = 1
@@ -88,9 +79,6 @@ def amountOfDivisors(number)
 		return divisors if number == 1
 	end
 end
-
-
-
 
 def problem12()
 	triNum, i = 3, 2

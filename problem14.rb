@@ -30,7 +30,7 @@ puts "longestcount = #{longestcount}"
 
 #Version 2.0
 
-def realCollatz(num)
+def collatz(num)
 	count = 1
 	until num == 1
 		count += 1
@@ -42,8 +42,8 @@ end
 def problem14()
 	largestSequence = 0
 	for i in 1..1000000
-		if realCollatz(i) > largestSequence
-			largestSequence = realCollatz(i)
+		if collatz(i) > largestSequence
+			largestSequence = collatz(i)
 			largestNum = i
 		end
 	end
