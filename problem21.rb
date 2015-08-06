@@ -1,3 +1,6 @@
+# Version 1.0
+
+=begin
 def findDivisorSum(num)
 	sum = 1
 	for i in 2..(num-1)
@@ -19,3 +22,18 @@ for initial in 1..9999
 end
 
 puts "\n\n #{amicSum}"
+=end
+
+# Version 2.0
+
+class Integer
+  def factors() (1..self).select { |n| (self % n).zero? and self != n } end
+end
+
+sum = 0
+
+for i in 2..9999
+	sum += i if i == (i.factors.inject(:+)).factors.inject(:+) and i != i.factors.inject(:+)
+end
+
+puts sum
