@@ -1,6 +1,14 @@
-n, d, c = 3, 2, 0
-1000.times do
-	n, d = n+d*2, n+d
-	c += 1 if n.to_s.length > d.to_s.length
+require 'prime'
+
+primes, constants, average, square = 0, 0, 1, 1
+while average > 0.1 or square < 50
+	square += 2
+	corner = square**2; constants += 1
+	3.times do
+		corner -= square-1
+		corner.prime? ? primes += 1 : constants += 1
+	end
+	average = primes.to_f/(2*square+1)
 end
-puts c
+puts square
+
