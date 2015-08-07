@@ -23,4 +23,4 @@ puts y2 - x
 
 #Version 2.0
 
-puts (1..100).to_a.inject(:+)**2 - (1..100).to_a.map {|i| i**2}.inject(:+)
+puts (1..100).to_a.inject(:+)**2-(1..100).to_a.map{|i| i**2}.inject(:+)

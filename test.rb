@@ -1,6 +1,7 @@
-class Integer
-  def factors() (1..self).select { |n| (self % n).zero? } end
-end
+require 'Linguo'
 
-puts 100.factors
+LINGUO_API_KEY = "647a90347afa4819677f66bf8531d593"
 
+#puts Linguo.detect("house", "647a90347afa4819677f66bf8531d593")
+
+puts "house".lang
