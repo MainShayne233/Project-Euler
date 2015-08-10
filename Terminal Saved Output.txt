@@ -1,0 +1,880 @@
+Last login: Fri Aug  7 17:47:09 on console
+cd programs/programming
+Shaynes-iMac:~ shayne$ cd programs/programming
+Shaynes-iMac:programming shayne$ cd dailyprogramming/dailyruby
+-bash: cd: dailyprogramming/dailyruby: No such file or directory
+Shaynes-iMac:programming shayne$ cd dailyprogrammer/dailyruby
+Shaynes-iMac:dailyruby shayne$ git pull
+Already up-to-date.
+Shaynes-iMac:dailyruby shayne$ ruby 226connectFour.rb
+ruby: No such file or directory -- 226connectFour.rb (LoadError)
+Shaynes-iMac:dailyruby shayne$ cd intermediate
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+winner!
+-OXO-O-
+-XXX---
+--XO---
+--OX---
+-------
+-------
+-------
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+winner!
+OOXO-O-
+XXXX---
+--XO---
+--OX---
+-------
+-------
+-------
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+winner!
+XXOX-X-
+OOOO---
+--OX---
+--XO---
+-------
+-------
+-------
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+winner!
+OOXO-O-
+XXXX---
+--XO---
+--OX---
+-------
+-------
+-------
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+226connectFour.rb:19: syntax error, unexpected keyword_return, expecting ']'
+			return [[row,column-3+i],[row,colum...
+			      ^
+226connectFour.rb:20: syntax error, unexpected keyword_end, expecting ']'
+226connectFour.rb:45: syntax error, unexpected end-of-input, expecting keyword_end
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+1
+0
+1
+1
+1
+2
+1
+3
+winner!
+OOXO-O-
+XXXX---
+--XO---
+--OX---
+-------
+-------
+-------
+Shaynes-iMac:intermediate shayne$ ruby intermediatetest.rb
+heyheyheyheyheyheyheyheyheyheyheyheyheyheyheyhey
+Shaynes-iMac:intermediate shayne$ ruby intermediatetest.rb
+heyheyheyheyheyheyheyheyheyheyheyheyheyheyheyhey
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+winner!
+XO-O---
+X--O---
+X------
+X------
+-------
+-------
+-------
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+1
+0
+1
+1
+1
+2
+1
+3
+winner!
+OOXO-O-
+XXXX---
+--XO---
+--OX---
+-------
+-------
+-------
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+1
+0
+1
+1
+1
+2
+1
+3
+winner!
+OOXO-O-
+XXXX---
+--XO---
+--OX---
+-------
+-------
+-------
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+1
+0
+1
+1
+1
+2
+1
+3
+winner!
+["-", "-", "-", "-", "-", "-", "-"]
+["-", "-", "-", "-", "-", "-", "-"]
+["-", "-", "-", "-", "-", "-", "-"]
+["-", "-", "O", "X", "-", "-", "-"]
+["-", "-", "X", "O", "-", "-", "-"]
+["X", "X", "X", "X", "-", "-", "-"]
+["O", "O", "X", "O", "-", "O", "-"]
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+1
+0
+1
+1
+1
+2
+1
+3
+winner!
+-------
+-------
+-------
+--OX---
+--XO---
+XXXX---
+OOXO-O-
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+226connectFour.rb:35: syntax error, unexpected ']', expecting keyword_end
+226connectFour.rb:63: syntax error, unexpected end-of-input, expecting keyword_end
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+226connectFour.rb:6:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:53:in `block in connectFour'
+	from 226connectFour.rb:50:in `each'
+	from 226connectFour.rb:50:in `connectFour'
+	from 226connectFour.rb:58:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+226connectFour.rb:6:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:53:in `block in connectFour'
+	from 226connectFour.rb:50:in `each'
+	from 226connectFour.rb:50:in `connectFour'
+	from 226connectFour.rb:58:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+226connectFour.rb:6:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:53:in `block in connectFour'
+	from 226connectFour.rb:50:in `each'
+	from 226connectFour.rb:50:in `connectFour'
+	from 226connectFour.rb:58:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+226connectFour.rb:6:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:53:in `block in connectFour'
+	from 226connectFour.rb:50:in `each'
+	from 226connectFour.rb:50:in `connectFour'
+	from 226connectFour.rb:58:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+226connectFour.rb:6:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:53:in `block in connectFour'
+	from 226connectFour.rb:50:in `each'
+	from 226connectFour.rb:50:in `connectFour'
+	from 226connectFour.rb:58:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+226connectFour.rb:6:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:53:in `block in connectFour'
+	from 226connectFour.rb:50:in `each'
+	from 226connectFour.rb:50:in `connectFour'
+	from 226connectFour.rb:58:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby intermediateTest.rb
+71
+Shaynes-iMac:intermediate shayne$ ruby intermediateTest.rb
+103
+Shaynes-iMac:intermediate shayne$ ruby intermediateTest.rb
+103
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+1
+0
+1
+1
+1
+2
+1
+3
+winner!
+---------
+---------
+---------
+--OX-----
+--XO-----
+XXXX-----
+OOXO-O---
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+C
+ 
+ 
+a
+D
+ 
+ 
+a
+D
+ 
+ 
+a
+C
+ 
+ 
+a
+C
+ 
+ 
+c
+B
+ 
+ 
+a
+A
+ 
+ 
+d
+G
+ 
+ 
+e
+E
+ 
+ 
+g
+---------
+X--------
+O--------
+O-O------
+O-XO-----
+O-XXX-O--
+OXXXO-X--
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+C
+ 
+ 
+a
+D
+ 
+ 
+a
+D
+ 
+ 
+a
+C
+ 
+ 
+a
+C
+ 
+ 
+c
+B
+ 
+ 
+a
+A
+ 
+ 
+d
+G
+ 
+ 
+e
+E
+ 
+ 
+g
+---------
+X--------
+O--------
+O-O------
+O-XO-----
+O-XXX-O--
+OXXXO-X--
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+C
+ 
+ 
+a
+D
+ 
+ 
+a
+D
+ 
+ 
+a
+C
+ 
+ 
+a
+C
+ 
+ 
+c
+B
+ 
+ 
+a
+A
+ 
+ 
+d
+G
+ 
+ 
+e
+E
+ 
+ 
+g
+---------
+X--------
+O--------
+O-O------
+O-XO-----
+O-XXX-O--
+OXXXO-X--
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+---------
+---------
+---------
+---------
+---------
+---------
+---------
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+---------
+X--------
+O--------
+O-O------
+O-XO-----
+O-XXX-O--
+OXXXO-X--
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+---------
+X--------
+O--------
+O-O------
+O-XO-----
+O-XXX-O--
+OXXXO-X--
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+---------
+X--------
+O--------
+O-O------
+O-XO-----
+O-XXX-O--
+OXXXO-X--
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+ay!
+---------
+X--------
+O--------
+X--------
+X--O-----
+XXOOX-O--
+XOXOOOX--
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+ay!
+---------
+---------
+---------
+X--------
+X--------
+X--O-----
+XO-O-----
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+---------
+X--------
+O--------
+O-O------
+O-XO-----
+O-XXX-O--
+OXXXO-X--
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+ay!
+---------
+---------
+---------
+O--------
+O--------
+O-XX-----
+O-XX-----
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+---------
+---------
+---------
+O--------
+O--------
+O-XX-----
+O-XX-----
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+226connectFour.rb:6:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:54:in `block in connectFour'
+	from 226connectFour.rb:51:in `each'
+	from 226connectFour.rb:51:in `connectFour'
+	from 226connectFour.rb:60:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+  O
+---------
+---------
+---------
+---------
+---X-----
+---O-----
+---X-----
+226connectFour.rb:13:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:61:in `block in connectFour'
+	from 226connectFour.rb:58:in `each'
+	from 226connectFour.rb:58:in `connectFour'
+	from 226connectFour.rb:67:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+  O
+--------------------
+--------------------
+--------------------
+--------------------
+---X----------------
+---O----------------
+---X----------------
+226connectFour.rb:13:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:61:in `block in connectFour'
+	from 226connectFour.rb:58:in `each'
+	from 226connectFour.rb:58:in `connectFour'
+	from 226connectFour.rb:67:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+0 -65
+--------------------
+--------------------
+--------------------
+--------------------
+---X----------------
+---O----------------
+---X----------------
+226connectFour.rb:13:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:61:in `block in connectFour'
+	from 226connectFour.rb:58:in `each'
+	from 226connectFour.rb:58:in `connectFour'
+	from 226connectFour.rb:67:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+0 -65  
+--------------------
+--------------------
+--------------------
+--------------------
+---X----------------
+---O----------------
+---X----------------
+226connectFour.rb:13:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:61:in `block in connectFour'
+	from 226connectFour.rb:58:in `each'
+	from 226connectFour.rb:58:in `connectFour'
+	from 226connectFour.rb:67:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+0 -65  
+--------------------
+--------------------
+--------------------
+--------------------
+---X----------------
+---O----------------
+---X----------------
+226connectFour.rb:13:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:61:in `block in connectFour'
+	from 226connectFour.rb:58:in `each'
+	from 226connectFour.rb:58:in `connectFour'
+	from 226connectFour.rb:67:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+0 -65  
+--------------------
+--------------------
+--------------------
+--------------------
+---X----------------
+---O----------------
+---X----------------
+226connectFour.rb:13:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:61:in `block in connectFour'
+	from 226connectFour.rb:58:in `each'
+	from 226connectFour.rb:58:in `connectFour'
+	from 226connectFour.rb:67:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+0 -65  
+--------------------
+--------------------
+--------------------
+--------------------
+---X----------------
+---O----------------
+---X----------------
+226connectFour.rb:13:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:61:in `block in connectFour'
+	from 226connectFour.rb:58:in `each'
+	from 226connectFour.rb:58:in `connectFour'
+	from 226connectFour.rb:67:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+0 -65  
+--------------------
+--------------------
+--------------------
+--------------------
+---X----------------
+---O----------------
+---X----------------
+226connectFour.rb:13:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:61:in `block in connectFour'
+	from 226connectFour.rb:58:in `each'
+	from 226connectFour.rb:58:in `connectFour'
+	from 226connectFour.rb:67:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+0 -65  
+--------------------
+--------------------
+--------------------
+--------------------
+---X----------------
+---O----------------
+---X----------------
+226connectFour.rb:13:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:61:in `block in connectFour'
+	from 226connectFour.rb:58:in `each'
+	from 226connectFour.rb:58:in `connectFour'
+	from 226connectFour.rb:67:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+0 -65  
+--------------------
+--------------------
+--------------------
+--------------------
+---X----------------
+---O----------------
+---X----------------
+226connectFour.rb:13:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:61:in `block in connectFour'
+	from 226connectFour.rb:58:in `each'
+	from 226connectFour.rb:58:in `connectFour'
+	from 226connectFour.rb:67:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+0 -65  
+--------------------
+--------------------
+--------------------
+--------------------
+---X----------------
+---O----------------
+---X----------------
+226connectFour.rb:13:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:61:in `block in connectFour'
+	from 226connectFour.rb:58:in `each'
+	from 226connectFour.rb:58:in `connectFour'
+	from 226connectFour.rb:67:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+0 -65
+--------------------
+--------------------
+--------------------
+--------------------
+---X----------------
+---O----------------
+---X----------------
+226connectFour.rb:13:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:61:in `block in connectFour'
+	from 226connectFour.rb:58:in `each'
+	from 226connectFour.rb:58:in `connectFour'
+	from 226connectFour.rb:67:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby intermediatetest.rb
+ 
+Shaynes-iMac:intermediate shayne$ ruby intermediatetest.rb
+ 
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+[["D", " ", " ", "d"], ["D", " ", " ", "c", " ", " ", " ", " "], ["C", " ", " ", "c", " ", " ", " ", " "], ["C", " ", " ", "c"], ["G", " ", " ", "f"], ["F", " ", " ", "d"], ["F", " ", " ", "f"], ["D", " ", " ", "f"], ["A", " ", " ", "a"], ["E", " ", " ", "b"], ["E", " ", " ", "e"], ["B", " ", " ", "g"], ["G", " ", " ", "g"], ["B", " ", " ", "a"]]0 -65
+--------------------
+--------------------
+--------------------
+--------------------
+---X----------------
+---O----------------
+---X----------------
+226connectFour.rb:13:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:62:in `block in connectFour'
+	from 226connectFour.rb:59:in `each'
+	from 226connectFour.rb:59:in `connectFour'
+	from 226connectFour.rb:68:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+[["C", " ", " ", "d"], ["D", " ", " ", "d"], ["D", " ", " ", "b"], ["C", " ", " ", "f"], ["C", " ", " ", "c"], ["B", " ", " ", "a"], ["A", " ", " ", "d"], ["G", " ", " ", "e"], ["E", " ", " ", "g"]]--------------------
+--------------------
+--------------------
+--OX----------------
+--XO----------------
+XXXX----------------
+OOXO-O--------------
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+[["D", " ", " ", "d"], ["D", " ", " ", "c", " ", " ", " ", " "], ["C", " ", " ", "c", " ", " ", " ", " "], ["C", " ", " ", "c"], ["G", " ", " ", "f"], ["F", " ", " ", "d"], ["F", " ", " ", "f"], ["D", " ", " ", "f"], ["A", " ", " ", "a"], ["E", " ", " ", "b"], ["E", " ", " ", "e"], ["B", " ", " ", "g"], ["G", " ", " ", "g"], ["B", " ", " ", "a"]]0 -65
+--------------------
+--------------------
+--------------------
+--------------------
+---X----------------
+---O----------------
+---X----------------
+226connectFour.rb:13:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:62:in `block in connectFour'
+	from 226connectFour.rb:59:in `each'
+	from 226connectFour.rb:59:in `connectFour'
+	from 226connectFour.rb:68:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+[["D", " ", " ", "d"], ["D", " ", " ", "c"], ["C", " ", " ", "c"], ["C", " ", " ", "c"], ["G", " ", " ", "f"], ["F", " ", " ", "d"], ["F", " ", " ", "f"], ["D", " ", " ", "f"], ["A", " ", " ", "a"], ["E", " ", " ", "b"], ["E", " ", " ", "e"], ["B", " ", " ", "g"], ["G", " ", " ", "g"], ["B", " ", " ", "a"]]--------------------
+--------------------
+--OX-O--------------
+--XO-OO-------------
+OXOXOXX-------------
+OXXOXXO-------------
+XOOXXOX-------------
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+[["D", " ", " ", "d"], ["D", " ", " ", "c"], ["C", " ", " ", "c"], ["C", " ", " ", "c"], ["G", " ", " ", "f"], ["F", " ", " ", "d"], ["F", " ", " ", "f"], ["D", " ", " ", "f"], ["A", " ", " ", "a"], ["E", " ", " ", "b"], ["E", " ", " ", "e"], ["B", " ", " ", "g"], ["G", " ", " ", "g"], ["B", " ", " ", "a"]]--------------------
+--------------------
+--OX-O--------------
+--XO-OO-------------
+OXOXOXX-------------
+OXXOXXO-------------
+XOOXXOX-------------
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+[["D", " ", " ", "d"], ["D", " ", " ", "c"], ["C", " ", " ", "c"], ["C", " ", " ", "c"], ["G", " ", " ", "f"], ["F", " ", " ", "d"], ["F", " ", " ", "f"], ["D", " ", " ", "f"], ["A", " ", " ", "a"], ["E", " ", " ", "b"], ["E", " ", " ", "e"], ["B", " ", " ", "g"], ["G", " ", " ", "g"], ["B", " ", " ", "a"]]226connectFour.rb:6:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:53:in `block in connectFour'
+	from 226connectFour.rb:52:in `each'
+	from 226connectFour.rb:52:in `connectFour'
+	from 226connectFour.rb:61:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+[["D", " ", " ", "d"], ["D", " ", " ", "c"], ["C", " ", " ", "c"], ["C", " ", " ", "c"], ["G", " ", " ", "f"], ["F", " ", " ", "d"], ["F", " ", " ", "f"], ["D", " ", " ", "f"], ["A", " ", " ", "a"], ["E", " ", " ", "b"], ["E", " ", " ", "e"], ["B", " ", " ", "g"], ["G", " ", " ", "g"], ["B", " ", " ", "a"]]-------
+-------
+--OX-O-
+--XO-OO
+OXOXOXX
+OXXOXXO
+XOOXXOX
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+[["D", " ", " ", "d"], ["D", " ", " ", "c"], ["C", " ", " ", "c"], ["C", " ", " ", "c"], ["G", " ", " ", "f"], ["F", " ", " ", "d"], ["F", " ", " ", "f"], ["D", " ", " ", "f"], ["A", " ", " ", "a"], ["E", " ", " ", "b"], ["E", " ", " ", "e"], ["B", " ", " ", "g"], ["G", " ", " ", "g"], ["B", " ", " ", "a"]]226connectFour.rb:33:in `block in winner?': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:32:in `each'
+	from 226connectFour.rb:32:in `winner?'
+	from 226connectFour.rb:55:in `block in connectFour'
+	from 226connectFour.rb:51:in `each'
+	from 226connectFour.rb:51:in `connectFour'
+	from 226connectFour.rb:60:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+[["D", " ", " ", "d"], ["D", " ", " ", "c"], ["C", " ", " ", "c"], ["C", " ", " ", "c"], ["G", " ", " ", "f"], ["F", " ", " ", "d"], ["F", " ", " ", "f"], ["D", " ", " ", "f"], ["A", " ", " ", "a"], ["E", " ", " ", "b"], ["E", " ", " ", "e"], ["B", " ", " ", "g"], ["G", " ", " ", "g"], ["B", " ", " ", "a"]]-------
+-------
+--OX-O-
+--XO-OO
+OXOXOXX
+OXXOXXO
+XOOXXOX
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+D
+ 
+ 
+d
+D
+ 
+ 
+c
+C
+ 
+ 
+c
+C
+ 
+ 
+c
+G
+ 
+ 
+f
+F
+ 
+ 
+d
+F
+ 
+ 
+f
+D
+ 
+ 
+f
+A
+ 
+ 
+a
+E
+ 
+ 
+b
+E
+ 
+ 
+e
+B
+ 
+ 
+g
+G
+ 
+ 
+g
+B
+ 
+ 
+a
+226connectFour.rb:6:in `dropper': undefined method `[]' for nil:NilClass (NoMethodError)
+	from 226connectFour.rb:48:in `block in connectFour'
+	from 226connectFour.rb:47:in `each'
+	from 226connectFour.rb:47:in `connectFour'
+	from 226connectFour.rb:56:in `<main>'
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+D
+ 
+ 
+d
+D
+ 
+ 
+c
+C
+ 
+ 
+c
+C
+ 
+ 
+c
+G
+ 
+ 
+f
+F
+ 
+ 
+d
+F
+ 
+ 
+f
+D
+ 
+ 
+f
+A
+ 
+ 
+a
+E
+ 
+ 
+b
+E
+ 
+ 
+e
+B
+ 
+ 
+g
+G
+ 
+ 
+g
+B
+ 
+ 
+a
+-------
+-------
+--OX-O-
+--XO-OO
+OXOXOXX
+OXXOXXO
+XOOXXOX
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+winner!
+-------
+-------
+-------
+--OX---
+--XO---
+XXXX---
+OOXO-O-
+Shaynes-iMac:intermediate shayne$ ruby 226connectFour.rb
+D
+ 
+ 
+d
+D
+ 
+ 
+c
+C
+ 
+ 
+c
+C
+ 
+ 
+c
+G
+ 
+ 
+f
+F
+ 
+ 
+d
+F
+ 
+ 
+f
+D
+ 
+ 
+f
+A
+ 
+ 
+a
+E
+ 
+ 
+b
+E
+ 
+ 
+e
+B
+ 
+ 
+g
+G
+ 
+ 
+g
+B
+ 
+ 
+a
+-------
+-------
+--OX-O-
+--XO-OO
+OXOXOXX
+OXXOXXO
+XOOXXOX
+Shaynes-iMac:intermediate shayne$ 

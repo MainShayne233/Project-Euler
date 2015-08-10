@@ -27,13 +27,13 @@ puts "\n\n #{amicSum}"
 # Version 2.0
 
 class Integer
-  def factors() (1..self).select { |n| (self % n).zero? and self != n } end
+  def factors() (1..(self)/2).select { |n| (self % n).zero? and self != n } end
 end
 
 sum = 0
 
 for i in 2..9999
-	sum += i if i == (i.factors.inject(:+)).factors.inject(:+) and i != i.factors.inject(:+)
+	sum += i if i == (i.factors.reduce(:+)).factors.reduce(:+) and i != i.factors.reduce(:+)
 end
 
 puts sum

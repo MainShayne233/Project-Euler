@@ -1,3 +1,6 @@
+#Version 1.0
+
+=begin
 require 'Matrix'
 
 
@@ -103,6 +106,10 @@ for i in 0..matrixSize-1
 end
 
 puts total
+=end
+
+#Version 2.0
+
 
 
 
