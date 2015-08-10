@@ -1,8 +1,6 @@
 require 'prime'
 
-# Version 1.0
 
-=begin
 #4179871
 
 def divSum(num)
@@ -75,30 +73,5 @@ while oddcounter <= 28123
 end
 
 puts total
-=end
 
-# Version 2.0
-
-timer_start = Time.now
-
-def isAbundant(n)
-	return true if divisorsSum(n) > n
-	return false
-end
-
-def divisorsSum(n)
-	primeFactors = Prime.prime_division(n)
-	finalSum = 1
-	for factor in primeFactors
-		tempSum = 1
-		for expo in 1..factor[1]
-			tempSum += factor[0]**expo
-		end
-		finalSum *= tempSum
-	end
-	return finalSum-n
-end
-
-
-puts "Elapsed Time: #{(Time.now - timer_start)*1000} milliseconds"
 	
