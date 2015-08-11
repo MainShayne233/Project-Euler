@@ -25,5 +25,8 @@ puts primesum
 =end
 
 # Version 2.0
+def problem10()
+	sum = 0; Prime.each(2000000) {|i| sum += i}; return sum
+end
 
-sum = 0; Prime.each(2000000) {|i| sum += i}; puts sum
+puts problem10

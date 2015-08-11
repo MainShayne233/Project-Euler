@@ -1,3 +1,6 @@
+# Version 1.0
+
+=begin
 list = Array.new
 
 for i in 2..999999
@@ -18,4 +21,18 @@ for num in list
 end
 
 puts total
+=end
 
+def sum_of_digits_to_fifth?(num)
+	num == num.to_s.split(//).map{|i| (i.to_i)**5}.reduce(:+)
+end
+
+
+
+def problem30()
+	sum = 0
+	for i in 4000..200000; sum += i if sum_of_digits_to_fifth?(i); end
+	return sum
+end
+
+puts problem30()

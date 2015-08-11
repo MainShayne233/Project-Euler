@@ -125,36 +125,19 @@ def primeFactors(number)
 	end
 end
 
-gcdHash = Hash.new; Prime.each(19) {|i| gcdHash.merge!("#{i}": 0)}
-
-Prime.each(19) do |prime|
-	for i in 1..20; if primeFactors(i)[:"#{prime}"]
-			if primeFactors(i)[:"#{prime}"] > gcdHash[:"#{prime}"]
-				gcdHash[:"#{prime}"] = primeFactors(i)[:"#{prime}"]
+def problem5()
+	gcdHash = Hash.new; Prime.each(19) {|i| gcdHash.merge!("#{i}": 0)}
+	Prime.each(19) do |prime|
+		for i in 1..20; if primeFactors(i)[:"#{prime}"]
+				if primeFactors(i)[:"#{prime}"] > gcdHash[:"#{prime}"]
+					gcdHash[:"#{prime}"] = primeFactors(i)[:"#{prime}"]
+				end
 			end
 		end
 	end
+	product = 1
+	Prime.each(19) { |prime| product *= prime**gcdHash[:"#{prime}"]}
+	return product
 end
 
-
-product = 1
-Prime.each(19) { |prime| product *= prime**gcdHash[:"#{prime}"]}
-puts product
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+puts problem5()

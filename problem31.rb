@@ -1,3 +1,6 @@
+# Version 1.0
+
+=begin
 oneP = 0
 twoP = 0
 fiveP = 0
@@ -29,7 +32,6 @@ for a in 0..1
 	onePo = a
 	for b in 0..3
 		fiftyP = b
-		puts "ay"
 		for c in 0..9
 			twentyP = c
 			for d in 0..19
@@ -52,3 +54,21 @@ for a in 0..1
 end
 
 puts comboAmount
+=end
+
+# Version 2.0
+
+def problem31()
+	target = 200
+	coinSizes = [1,2,5,10,20,50,100,200]
+	ways = Array.new(target+1, 0)
+	ways[0]=1
+	for i in 0..coinSizes.count-1
+		for j in coinSizes[i]..target
+			ways[j] += ways[j - coinSizes[i]]
+		end
+		return ways if i ==2
+	end
+	return ways.last
+end
+puts problem31()

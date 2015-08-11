@@ -109,6 +109,26 @@ puts total
 =end
 
 #Version 2.0
+def problem28()
+	sum = 1
+	stepper = 2
+	(3..1001).step(2) do |square|
+		corner = square**2
+		for i in 0..3; sum += corner-stepper*i; end
+		stepper += 2
+	end
+	return sum
+end
+
+
+puts problem28
+
+
+
+
+
+
+
 
 
 

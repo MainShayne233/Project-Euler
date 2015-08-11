@@ -17,10 +17,13 @@ puts largestproduct
 
 
 #Version 2.0
-
-product = 0
-series = File.readlines('p008_series.txt').join
-for start in 0..988; tempProduct = series[start..start+12].split(//).map{|i| i.to_i}.inject(:*)
-	product = tempProduct if product < tempProduct
+def problem8()
+	product = 0
+	series = File.readlines('p008_series.txt').join
+	for start in 0..988; tempProduct = series[start..start+12].split(//).map{|i| i.to_i}.inject(:*)
+		product = tempProduct if product < tempProduct
+	end
+	return product
 end
-puts product
+
+puts problem8()

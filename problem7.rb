@@ -27,5 +27,11 @@ puts prime
 =end
 
 #Version 2.0
+def problem7()
+	return Prime.take(10001).to_a.last
+end
 
-puts Prime.take(10001).to_a.last
+puts problem7()
+
+
+
