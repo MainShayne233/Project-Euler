@@ -1,5 +1,20 @@
 require 'prime'
 
+def fraction_arrange(f, cnum)
+	f.push(cnum,["#{f[0]}#{cnum}".to_i,"#{cnum}#{f[1]}".to_i],["#{cnum}#{f[0]}".to_i,"#{f[1]}#{cnum}".to_i])
+	i=3
+	until i == f.count; if f[i][0] >= f[i][1]; f.delete_at(i); else; i += 1; end; end
+	return f
+end
+
+def isnt_trivial?(fs)
+	return false if fs.count < 4
+	for f in 3..fs.count-1
+		return [fs[f][0],fs[f][1]] if Rational(fs[f][0],fs[f][1]) == Rational(fs[0])/Rational(fs[1])
+	end
+	return false
+end
+
 def primeFactors(number)
 	factorization = Hash.new
 	Prime.each do |prime|
@@ -104,8 +119,32 @@ def problem31()
 	return ways.last
 end
 
-for i in 1..10
-	puts send("problem#{i}")
+def problem32()
+	solutions = Array.new
+	digitsPermutated = (1..9).to_a.permutation(9).to_a
+	for set in digitsPermutated
+		if (set[0..1].join.to_i)*(set[2..4].join.to_i) == set[5..8].join.to_i
+			solutions.push(set[5..8].join.to_i)
+		end
+		if (set[0..0].join.to_i)*(set[1..4].join.to_i) == set[5..8].join.to_i
+			solutions.push(set[5..8].join.to_i)
+		end
+	end
+	return solutions.uniq.reduce(:+)
+end
+
+def problem33()
+	nonTrivials = Array.new
+	digitsArray = (1..9).to_a.concat((1..9).to_a).permutation(2).to_a.uniq
+	for fraction in digitsArray
+		for i in 0..9
+			tempArrange = fraction_arrange(fraction, i)
+			frac = isnt_trivial?(tempArrange)
+			nonTrivials.push(frac) if frac
+		end
+	end
+	nonTrivials.uniq!.map!{|i| Rational(i[0],i[1])}
+	return nonTrivials.reduce(:*).to_s.split("/")[1].to_i
 end
 
 #for function in functionArray
