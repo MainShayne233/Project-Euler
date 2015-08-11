@@ -1,5 +1,15 @@
 require 'prime'
 
+class Integer
+	def factorial
+		f=1; for i in 1..self; f*= i; end; f
+	end
+end
+
+def factorial_sum(num)
+	num.to_s.split(//).map{|i| (i.to_i).factorial}.reduce(:+)
+end
+
 def fraction_arrange(f, cnum)
 	f.push(cnum,["#{f[0]}#{cnum}".to_i,"#{cnum}#{f[1]}".to_i],["#{cnum}#{f[0]}".to_i,"#{f[1]}#{cnum}".to_i])
 	i=3
@@ -145,6 +155,10 @@ def problem33()
 	end
 	nonTrivials.uniq!.map!{|i| Rational(i[0],i[1])}
 	return nonTrivials.reduce(:*).to_s.split("/")[1].to_i
+end
+
+def problem34()
+	sum=0; for i in 3..50000; sum+=i if i==factorial_sum(i); end; sum
 end
 
 #for function in functionArray

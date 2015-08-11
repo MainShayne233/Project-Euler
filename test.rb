@@ -1,1 +1,3 @@
-puts Rational(2,10).to_s
+require 'Prime'
+
+puts 2.prime?
