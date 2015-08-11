@@ -67,8 +67,9 @@ def problem31()
 		for j in coinSizes[i]..target
 			ways[j] += ways[j - coinSizes[i]]
 		end
-		return ways if i ==2
 	end
 	return ways.last
 end
+
 puts problem31()
+
