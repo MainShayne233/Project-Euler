@@ -6,6 +6,21 @@ class Integer
 	end
 end
 
+def base10_to_binary(n)
+	binary = Array.new
+	until n < 1; binary.insert(0,n%2); n/=2; end
+	binary.join
+end
+
+def circular_prime?(prime)
+	tempPrime = prime.to_s
+	(tempPrime.length-1).times do
+		tempPrime = "#{tempPrime[1..-1]}#{tempPrime[0]}"
+		return false if !tempPrime.to_i.prime?
+	end
+	return true
+end
+
 def factorial_sum(num)
 	num.to_s.split(//).map{|i| (i.to_i).factorial}.reduce(:+)
 end
@@ -15,6 +30,10 @@ def fraction_arrange(f, cnum)
 	i=3
 	until i == f.count; if f[i][0] >= f[i][1]; f.delete_at(i); else; i += 1; end; end
 	return f
+end
+
+def is_palindrome?(n)
+	n.to_s == n.to_s.reverse
 end
 
 def isnt_trivial?(fs)
@@ -36,6 +55,16 @@ end
 
 def sum_of_digits_to_fifth?(num)
 	num == num.to_s.split(//).map{|i| (i.to_i)**5}.reduce(:+)
+end
+
+def trunctable_both_ways?(n)
+	for l in 1..n.to_s.length-1
+		return false if !n.to_s[l..n.to_s.length-1].to_i.prime?
+	end
+	for r in 2..n.to_s.length
+		return false if !n.to_s[0..-r].to_i.prime?
+	end
+	true
 end
 
 def problem1()
@@ -159,6 +188,28 @@ end
 
 def problem34()
 	sum=0; for i in 3..50000; sum+=i if i==factorial_sum(i); end; sum
+end
+
+def problem35()
+	count = 0
+	Prime.each(1000000) {|prime| count+= 1 if circular_prime?(prime)}
+	return count
+end
+
+def problem36()
+	sum = 0
+	for n in 1..1000000
+		sum += n if is_palindrome?(n) and is_palindrome?(base10_to_binary(n))
+	end
+	sum
+end
+
+def problem37()
+	trunctablePrimes = Array.new
+	Prime.each do |prime|
+		trunctablePrimes.push(prime) if trunctable_both_ways?(prime) and prime > 7
+		return trunctablePrimes.reduce(:+) if trunctablePrimes.count == 11
+	end
 end
 
 #for function in functionArray
