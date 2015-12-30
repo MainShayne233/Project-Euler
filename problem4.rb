@@ -19,10 +19,28 @@ puts largest
 =end
 
 #Version 2.0
+=begin
 def problem4()
 	largest = 0
 	100.step(999,1) {|i| 100.step(999,1) {|j| largest = i*j if (i*j).to_s == (i*j).to_s.reverse and i*j > largest}}
 	return largest
+end
+=end
+
+# Version 3.0, faster
+def problem4()
+	a = Array.new()
+	for x in 100..999
+		for y in 100..999
+			a.push(x*y)
+		end
+	end
+	a = a.sort.reverse!
+	for p in a
+		if p.to_s == p.to_s.reverse
+			return p
+		end
+	end
 end
 
 puts problem4()

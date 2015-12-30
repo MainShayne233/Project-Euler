@@ -27,8 +27,25 @@ puts largest
 
 #Version 2.0
 
+=begin
 def problem3()
 	for prime in Prime.each(600851475143.0**(0.5)).to_a.reverse!; return prime if 600851475143%prime == 0; end
 end
 
 puts problem3
+=end
+
+# Version 3.0, much faster
+
+def problem3()
+	n = 600851475143
+	Prime.each do |p|
+		while n % p == 0
+			n /= p
+			return n if Prime.prime?(n)
+		end
+	end
+end
+
+puts problem3()
+
