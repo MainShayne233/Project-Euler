@@ -1,3 +1,5 @@
+require 'byebug'
+
 # Version 1.0
 =begin
 largest = 0
@@ -28,19 +30,20 @@ end
 =end
 
 # Version 3.0, faster
-def problem4()
-	a = Array.new()
-	for x in 100..999
-		for y in 100..999
-			a.push(x*y)
-		end
-	end
-	a = a.sort.reverse!
-	for p in a
-		if p.to_s == p.to_s.reverse
-			return p
-		end
-	end
+# def problem4
+# 	a = []
+# 	(100..999).each do |x|
+# 		(x..999).each {|y| a.push(x*y)}
+# 	end
+# 	a.sort!.reverse!
+# 	for p in a
+# 		return p if p.to_s == p.to_s.reverse
+# 	end
+# end
+
+# Version 4.0
+def problem4
+	(100..999).map{|i| (i..999).map{|j| j*i} }.flatten.sort.reverse_each {|k| return k if k.to_s == k.to_s.reverse}
 end
 
-puts problem4()
+puts problem4
