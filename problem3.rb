@@ -37,15 +37,34 @@ puts problem3
 
 # Version 3.0, much faster
 
-def problem3()
-	n = 600851475143
+# def problem3()
+# 	n = 600851475143
+# 	Prime.each do |p|
+# 		while n % p == 0
+# 			n /= p
+# 			return n if Prime.prime?(n)
+# 		end
+# 	end
+# end
+
+
+# Version 4.0
+
+def prime_factorization(n)
+	factorization = {}
 	Prime.each do |p|
 		while n % p == 0
+			factorization[p] = factorization[p] ? (factorization[p] + 1) : 1
 			n /= p
-			return n if Prime.prime?(n)
 		end
+		break if p > n
 	end
+	factorization
 end
 
-puts problem3()
+def problem3
+	prime_factorization(600851475143).keys.last
+end
+
+puts problem3
 
