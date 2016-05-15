@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1594bffe-72db-412d-9b81-acea4589dbfa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/problem1.rb" afterPath="$PROJECT_DIR$/problem1.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/problem2.rb" afterPath="$PROJECT_DIR$/problem2.rb" />
     </list>
     <ignored path="Project-Euler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,11 +23,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="problem1.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="problem1.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/problem1.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="problem3.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/problem3.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="problem2.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/problem2.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -42,6 +62,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/problem1.rb" />
+        <option value="$PROJECT_DIR$/problem2.rb" />
       </list>
     </option>
   </component>
@@ -120,12 +141,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1463289301491</updated>
-      <workItem from="1463289302649" duration="124000" />
+      <workItem from="1463289302649" duration="789000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124000" />
+    <option name="totallyTimeSpent" value="789000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1200" y="672" width="1200" height="1247" extended-state="0" />
@@ -158,10 +179,26 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/problem2.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/problem1.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problem3.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -16,10 +16,22 @@ puts x
 =end
 
 #Version 2.0
-def problem2()
-	fibArray = [1, 2, 3]
-	until fibArray.last > 4000000; fibArray.push(fibArray.last+fibArray[fibArray.count-2]); end
-	return fibArray.delete_if {|i| i%2!=0 or i > 4000000}.inject(:+)
+# def problem2()
+# 	fibArray = [1, 2, 3]
+# 	until fibArray.last > 4000000; fibArray.push(fibArray.last+fibArray[fibArray.count-2]); end
+# 	return fibArray.delete_if {|i| i%2!=0 or i > 4000000}.inject(:+)
+# end
+
+
+# Version 3.0
+
+def fib_seq(max, seq = [1,1])
+	seq[-2..-1].reduce(:+) > max ? seq : fib_seq(max, seq.push(seq[-2..-1].reduce(:+)))
+end
+
+
+def problem2
+	fib_seq(4000000).select {|i| i % 2 == 0}.reduce(:+)
 end
 
 puts problem2()
