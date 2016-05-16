@@ -1,4 +1,4 @@
-require 'prime'
+require './utils'
 
 #Version 1.0
 
@@ -27,11 +27,15 @@ puts prime
 =end
 
 #Version 2.0
-def problem7()
-	return Prime.take(10001).to_a.last
+# def problem7()
+# 	return Prime.take(10001).to_a.last
+# end
+#
+# puts problem7()
+
+# Version 3.0
+def problem7
+	Prime.take(10001).last
 end
 
-puts problem7()
-
-
-
+puts problem7

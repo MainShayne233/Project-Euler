@@ -1,4 +1,4 @@
-require 'prime'
+require './utils'
 
 #Version 1.0
 =begin
@@ -50,20 +50,10 @@ puts problem3
 
 # Version 4.0
 
-def prime_factorization(n)
-	factorization = {}
-	Prime.each do |p|
-		while n % p == 0
-			factorization[p] = factorization[p] ? (factorization[p] + 1) : 1
-			n /= p
-		end
-		break if p > n
-	end
-	factorization
-end
+
 
 def problem3
-	prime_factorization(600851475143).keys.last
+	Utils.prime_factorization(600851475143).keys.last
 end
 
 puts problem3

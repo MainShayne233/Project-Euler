@@ -1,3 +1,5 @@
+require './utils'
+
 #Version 1.0
 =begin
 num1 = 0
@@ -25,14 +27,11 @@ puts x
 
 # Version 3.0
 
-def fib_seq(max, seq = [1,1])
-	seq[-2..-1].reduce(:+) > max ? seq : fib_seq(max, seq.push(seq[-2..-1].reduce(:+)))
-end
 
 
 def problem2
-	fib_seq(4000000).select {|i| i % 2 == 0}.reduce(:+)
+	Utils.fib_seq(4000000).select {|i| i % 2 == 0}.reduce(:+)
 end
 
-puts problem2()
+puts problem2
 

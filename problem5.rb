@@ -1,4 +1,4 @@
-require 'prime'
+require './utils'
 
 #Version 1.0
 =begin
@@ -164,67 +164,54 @@ end
 
 # Version 4.0 Much faster
 
-def p_fac(n)
-	i = 0
-	h = Hash.new()
-	Prime.each do |p|
-		if n == p
-			h[p] = 1
-			return h
-		end
-		h[p] = 0
-		while n % p == 0
-			n /= p
-			a=h[p] += 1
-			return h if n == 1
-		end
-	end
+# def p_fac(n)
+# 	i = 0
+# 	h = Hash.new()
+# 	Prime.each do |p|
+# 		if n == p
+# 			h[p] = 1
+# 			return h
+# 		end
+# 		h[p] = 0
+# 		while n % p == 0
+# 			n /= p
+# 			a=h[p] += 1
+# 			return h if n == 1
+# 		end
+# 	end
+# end
+#
+# def p_fac_gcd(h)
+# 	gcd = 1
+# 	h.each do |key, val|
+# 		gcd*=(key**val)
+# 	end
+# 	gcd
+# end
+#
+# def problem5()
+# 	gcd = p_fac(2)
+# 	for i in 3..20
+# 		p_fac(i).each do |key, val|
+# 			if gcd[key].nil?
+# 				gcd[key] = val
+# 			elsif gcd[key] < val
+# 				gcd[key] = val
+# 			end
+# 		end
+# 	end
+# 	return p_fac_gcd(gcd)
+# end
+#
+# puts problem5()
+
+# Version 5.0
+
+def problem5
+	Utils.merge_hashes((1..20).map{|i| Utils.prime_factorization(i)}).map{|k, v| k**v}.reduce(:*)
 end
 
-def p_fac_gcd(h)
-	gcd = 1
-	h.each do |key, val|
-		gcd*=(key**val)
-	end
-	gcd
-end
-
-def problem5()
-	gcd = p_fac(2)
-	for i in 3..20
-		p_fac(i).each do |key, val|
-			if gcd[key].nil?
-				gcd[key] = val
-			elsif gcd[key] < val
-				gcd[key] = val
-			end
-		end
-	end
-	return p_fac_gcd(gcd)
-end
-
-puts problem5()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+puts problem5
 
 
 

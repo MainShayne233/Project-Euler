@@ -22,8 +22,16 @@ puts y2 - x
 =end
 
 #Version 2.0
-def problem6()
-	return (1..100).to_a.inject(:+)**2-(1..100).to_a.map{|i| i**2}.inject(:+)
+# def problem6()
+# 	return (1..100).to_a.inject(:+)**2-(1..100).to_a.map{|i| i**2}.inject(:+)
+# end
+#
+# puts problem6()
+
+# Version 3.0
+
+def problem6
+	(1..100).reduce(:+)**2 - (1..100).map{|i| i**2}.reduce(:+)
 end
 
-puts problem6()
+puts problem6
